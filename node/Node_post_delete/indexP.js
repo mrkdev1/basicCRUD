@@ -1,7 +1,7 @@
 //Streams json from test.json and POSTS testfolder into folder
 //Uses the request module
 
-var MGMT_ADDRESS = '10.145.193.169'; //management ip address
+var MGMT_ADDRESS = 'xxx.xxx.xxx.xxx'; //management ip address
 var USER = 'some_admin';
 var PASS = 'some_password';
 var MOD = '/mgmt/tm/sys/folder';
