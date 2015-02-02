@@ -1,0 +1,26 @@
+
+****************************
+The following cmds are for POSTing a folder: testfolder
+
+confirm the resource does not already exist
+
+curl -k -u some_admin:some_password -X GET https://<management_ip>/mgmt/tm/sys/folder >doodle.json
+
+add a new resource testfolder
+
+curl -k -u some_admin:some_password -H "Content-Type: application/json" -X POST -d "{\"name\":\"testfolder\"}" https://10.145.193.169/mgmt/tm/sys/folder >diddle.json
+
+confirm the new resource has been added
+
+curl -k -u some_admin:some_password -X GET https://<management_ip>/mgmt/tm/sys/folder >doodle.json
+
+
+check that the resource exists before deleting it
+
+curl -k -u some_admin:some_password -X GET https://<management_ip>/mgmt/tm/sys/folder/~Common~testfolder >doodle.json
+
+delete the resource
+
+curl -k -u some_admin:some_password -X DELETE https://<management_ip>/mgmt/tm/sys/folder/~Common~testfolder >diddle.json
+
+

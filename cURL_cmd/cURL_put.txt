@@ -1,0 +1,24 @@
+
+**********
+
+curl -k -u some_admin:some_password -H "Content-Type: application/json" -X PUT -d "{\"guiSecurityBannerText\":\"Test Test Test\"}" https://<management_ip>/mgmt/tm/sys/global-settings >diddle.json
+
+
+curl -k -u some_admin:some_password -H "Content-Type: application/json" -X GET https://<management_ip>/mgmt/tm/sys/global-settings >doodle.json
+
+
+curl -k -u some_admin:some_password -H "Content-Type: application/json" -X PUT -d "{\"guiSecurityBannerText\":\"Welcome to the BIG-IP Configuration Utility.\n\nLog in with your username and password using the fields on the left.\"}" https://<management_ip>/mgmt/tm/sys/global-settings >diddle.json
+
+*********
+
+
+curl -k -u some_admin:some_password -H "Content-Type: application/json" -X PUT -d @payload.json https://<management_ip>/mgmt/tm/sys/global-settings >diddle.json
+
+The payload.json file:
+
+{"guiSecurityBannerText":"Test Test Test"}
+
+and then back
+
+{"guiSecurityBannerText":"Welcome to the BIG-IP Configuration Utility.\n\nLog in with your username and password using the fields on the left."}
+

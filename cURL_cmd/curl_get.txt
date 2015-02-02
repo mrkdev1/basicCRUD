@@ -1,0 +1,12 @@
+"The following cmd gets license info about the BigIP using the 
+iControl REST API."
+
+
+curl -k -u some_admin:some_password -X GET https://<management_ip>/mgmt/tm/sys/license >doodle.json
+
+
+************
+
+
+
+
