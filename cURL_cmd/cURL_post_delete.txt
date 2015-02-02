@@ -8,7 +8,7 @@ curl -k -u some_admin:some_password -X GET https://<management_ip>/mgmt/tm/sys/f
 
 add a new resource testfolder
 
-curl -k -u some_admin:some_password -H "Content-Type: application/json" -X POST -d "{\"name\":\"testfolder\"}" https://10.145.193.169/mgmt/tm/sys/folder >diddle.json
+curl -k -u some_admin:some_password -H "Content-Type: application/json" -X POST -d "{\"name\":\"testfolder\"}" https://<management_ip>/mgmt/tm/sys/folder >diddle.json
 
 confirm the new resource has been added
 
